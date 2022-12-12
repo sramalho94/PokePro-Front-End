@@ -2,6 +2,7 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Trainer from '../components/Trainer'
 
 const Home = ({ user, authenticated }) => {
   const navigate = useNavigate()
@@ -17,7 +18,23 @@ const Home = ({ user, authenticated }) => {
   }, [])
 
   return user && authenticated ? (
-    <div>Home</div>
+    <div id="home-container">
+      <header className="home-header">
+        <h2 className="greet-user">
+          I know you'll be a Pokemon master, {user.userName}
+        </h2>
+      </header>
+      <main className="home-main">
+        {trainers?.map((trainer) => (
+          <Trainer
+            key={trainer.id}
+            id={trainer.id}
+            name={trainer.name}
+            image={trainer.image}
+          />
+        ))}
+      </main>
+    </div>
   ) : (
     <div className="protected">
       <h3 className="protected-prompt">
