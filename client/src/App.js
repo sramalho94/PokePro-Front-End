@@ -6,6 +6,9 @@ import Nav from './components/Nav'
 import Home from './Pages/Home'
 import Test from './components/TestComponent'
 import Login from './Pages/Login'
+import Welcome from './Pages/Welcome'
+import Register from './Pages/Register'
+import TrainerTeam from './Pages/TrainerTeam'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -28,7 +31,7 @@ function App() {
     if (token) {
       checkToken()
     }
-  })
+  }, [])
   return (
     <div>
       <div>
@@ -41,7 +44,11 @@ function App() {
         </header>
         <main>
           <Routes>
-            <Route index element={<Home authenticated={authenticated} />} />
+            <Route
+              index
+              element={<Home user={user} authenticated={authenticated} />}
+            />
+            <Route path="/welcome" element={<Welcome />} />
             <Route
               path="/login"
               element={
@@ -50,6 +57,13 @@ function App() {
                   toggleAuthenticated={toggleAuthenticated}
                 />
               }
+            />
+            <Route path="/register" element={<Register />} />
+            <Route
+              path="/trainer_team/:id"
+              element={<TrainerTeam />}
+              user={user}
+              authenticated={authenticated}
             />
           </Routes>
         </main>
