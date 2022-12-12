@@ -47,9 +47,11 @@ const Login = ({ toggleAuthenticated, setUser }) => {
               required
             />
           </div>
-          <button>
+          <button
             disabled={!formValues.userName || !formValues.password}
             className="form-button"
+          >
+            Login
           </button>
           <span id="register-container">
             <h3> Don't have an account? &nbsp;</h3>
