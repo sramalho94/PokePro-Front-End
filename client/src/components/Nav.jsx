@@ -15,6 +15,7 @@ const Nav = ({ authenticated, user, handleLogOut}) => {
 
         <nav className="menu_box">
           <NavLink to = '/' className="nav-link"> Home </NavLink>
+          <NavLink onClick={handleLogOut} to='/' className="nav-link">Sign Out</NavLink>
         </nav>
       </div>
     )
@@ -38,7 +39,7 @@ const Nav = ({ authenticated, user, handleLogOut}) => {
         </marquee>
       </span>
       <div id='nav-content'>
-        <Link to={'/'}>
+        <Link to={'/'} id="logo-link">
           <img src="https://www.serebii.net/letsgopikachueevee/pokemon/025-crown.png" alt="website logo" className="logo"/>
         </Link>
         <div id= 'links-container'> 
