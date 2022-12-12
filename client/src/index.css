@@ -15,3 +15,64 @@ html {
 ::-webkit-scrollbar {
   display: none;
 }
+
+/* Nav */
+.logo{
+  width: 4rem;
+  height: auto;
+  margin: 0 2rem;
+  padding: .2rem 1rem;
+  gap: 1rem;
+  object-fit: fill;
+  border: none;
+  box-shadow: none;
+}
+
+.nav-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow-y: hidden;
+  
+}
+
+#nav-content{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  
+  border-bottom: 2px solid rgb(200, 198, 198);
+  margin: .2rem 1%;
+  overflow-y: hidden;
+  
+}
+
+#nav-banner{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* align-items: center; */
+  background: rgb(215,129,106);
+  background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgb(134, 51, 54) 100%);
+  padding: .2rem;
+  color: white;
+}
+
+.marquee-image{
+  width: 4rem;
+  height: auto;
+  margin: 0 2rem;
+  padding: .2rem 1rem;
+  gap: 1rem;
+  object-fit: fill;
+  border: none;
+  box-shadow: none;
+}
+
+.marquee-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
