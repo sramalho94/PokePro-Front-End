@@ -79,3 +79,13 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+/* Trainer Team */
+.team-lineup{
+  display: flex;
+  flex-direction: row;
+}
+
+.team-trainer-image{
+  height: 6rem
+}
