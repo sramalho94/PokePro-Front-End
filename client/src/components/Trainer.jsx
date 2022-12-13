@@ -10,7 +10,9 @@ const Trainer = ({id, name, image }) => {
         {/* close link here */}
       </div>
       <div className='trainer-info'>
-        <Link to={`trainer_team/${id}`} >
+        <Link to={`trainer_team/${id}`} 
+        name = {name}
+        >
         <h2>{` Trainer: ${name}`}</h2>
         </Link>
       </div>
