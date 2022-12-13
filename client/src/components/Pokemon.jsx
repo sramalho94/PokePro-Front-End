@@ -10,7 +10,7 @@ const Pokemon = ({id, name, image, types, trainer }) => {
       <h2>{name}</h2>
       {console.log(name)}
       <div className='image-wrapper'>
-        <img  src={image}/>
+        <img src={image}/>
         <div className='pokemon-types'>
         {types?.map((type)=>(
           <div key={type}>
