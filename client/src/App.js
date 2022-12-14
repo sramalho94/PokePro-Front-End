@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react'
 import { CheckSession } from './services/Auth'
 import Nav from './components/Nav'
 import Home from './Pages/Home'
-import Test from './components/TestComponent'
 import Login from './Pages/Login'
 import Welcome from './Pages/Welcome'
 import Register from './Pages/Register'
 import TrainerTeam from './Pages/TrainerTeam'
+import UserPage from './Pages/UserPage'
+import EditUserPage from './Pages/EditUserPage'
+import AddToTeamForm from './Pages/AddToTeamForm'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -65,6 +67,12 @@ function App() {
               user={user}
               authenticated={authenticated}
             />
+            <Route
+              path="/profile_page/:id"
+              element={<UserPage user={user} handleLogOut={handleLogOut} />}
+            />
+            <Route path="/edit_info/:id" element={<EditUserPage />} />
+            <Route path="/add_to_team/:id" element={<AddToTeamForm />} />
           </Routes>
         </main>
       </div>
