@@ -35,7 +35,7 @@ const Nav = ({ authenticated, user, handleLogOut}) => {
           <div className="marquee-content">
           <h4 id='nav-banner-text'> Having trouble being the very best? PokePro is here for you</h4>
           <img src='https://toppng.com/uploads/preview/master-ball-the-best-poke-ball-transparent-background-pokemon-balls-11562943853enmb9crbnb.png'
-          className="marquee-image"></img>
+          className="marquee-image" alt="not found"></img>
           </div>
         </marquee>
       </span>
