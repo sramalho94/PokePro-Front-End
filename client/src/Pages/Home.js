@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Trainer from '../components/Trainer'
+import Search from './Search'
 
 const Home = ({ user, authenticated }) => {
   const navigate = useNavigate()
@@ -26,6 +27,9 @@ const Home = ({ user, authenticated }) => {
           I know you'll be a Pokemon master, {user.userName}
         </h2>
       </header>
+      <div className="search-component-container">
+        <Search trainersData={trainers} />
+      </div>
       <main className="home-main">
         {trainers?.map((trainer) => (
           <Trainer
