@@ -11,7 +11,7 @@ const EditUserPage = () => {
   const intitialState = {
     userName: '',
     image: '',
-    password: '',
+    passwordDigest: '',
     id: id
   }
 
@@ -69,7 +69,7 @@ const EditUserPage = () => {
           </label>
           <input
             type="text"
-            id="password"
+            id="passwordDigest"
             onChange={handleChange}
             value={formState.password}
             required
