@@ -2,24 +2,24 @@ import React from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import Client from '../services/api'
-import axios from 'axios'
 import Pokemon from '../components/Pokemon'
 
 const TrainerTeam = () => {
   const { id } = useParams()
   const [teams, setTeams] = useState(null)
   const [trainer, setTrainer] = useState(null)
+  const [deletePokemon, setDeletePokemon] = useState(false)
 
+  const getTeams = async () => {
+    const response = await Client.get(
+      `https://pokepro-backend.herokuapp.com/api/teams/trainer/${id}`
+    )
+    setTrainer(response.data)
+    setTeams(response.data.pokemon_team)
+  }
   useEffect(() => {
-    const getTeams = async () => {
-      const response = await Client.get(
-        `https://pokepro-backend.herokuapp.com/api/teams/trainer/${id}`
-      )
-      setTrainer(response.data)
-      setTeams(response.data.pokemon_team)
-    }
     getTeams()
-  }, [])
+  }, [deletePokemon])
 
   return teams !== null ? (
     <div className="team-container">
@@ -42,6 +42,7 @@ const TrainerTeam = () => {
             types={pokemon?.types}
             sprite={pokemon?.sprite}
             trainer={trainer.id}
+            getTeams={getTeams}
           />
         ))}
       </div>
