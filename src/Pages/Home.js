@@ -24,7 +24,7 @@ const Home = ({ user, authenticated }) => {
     <div id="home-container">
       <header className="home-header">
         <h2 id="greet-user">
-          I know you'll be a Pokemon master, {user.userName}
+          I know you'll be a Pokemon master, {user.userName}!
         </h2>
       </header>
       <div className="search-component-container">
