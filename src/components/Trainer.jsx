@@ -5,7 +5,7 @@ const Trainer = ({id, name, image, sprite }) => {
   return (
     <div className='trainer-card' key={id}>
       <div className='image-wrapper'>
-        <img src={image} alt={`Pic of trainer: ${name}`}/>
+        <img src={image} alt={`Pic of trainer: ${name}`} className="trainer-image"/>
       </div>
       <div className='trainer-info'>
         <Link to={`trainer_team/${id}`} 
