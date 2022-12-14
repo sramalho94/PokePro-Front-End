@@ -11,7 +11,9 @@ const Home = ({ user, authenticated }) => {
 
   useEffect(() => {
     const getTrainers = async () => {
-      const response = await axios.get('http://localhost:3001/api/trainers/')
+      const response = await axios.get(
+        'https://pokepro-backend.herokuapp.com/api/trainers/'
+      )
       setTrainers(response.data)
     }
     getTrainers()
@@ -31,6 +33,7 @@ const Home = ({ user, authenticated }) => {
             id={trainer.id}
             name={trainer.name}
             image={trainer.image}
+            sprite={trainer?.sprite}
           />
         ))}
       </main>
