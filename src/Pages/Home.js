@@ -23,7 +23,7 @@ const Home = ({ user, authenticated }) => {
   return user && authenticated ? (
     <div id="home-container">
       <header className="home-header">
-        <h2 className="greet-user">
+        <h2 id="greet-user">
           I know you'll be a Pokemon master, {user.userName}
         </h2>
       </header>
