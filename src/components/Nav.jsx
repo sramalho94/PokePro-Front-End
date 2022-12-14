@@ -5,20 +5,11 @@ const Nav = ({ authenticated, user, handleLogOut}) => {
   let authenticatedOptions
   if (user){
     authenticatedOptions = (
-      <div className="burger-menu">
-        <input id="menu_toggle" type= "checkbox"/>
-        <label>
-          <div className="bun-top"></div>
-          <div className="burger-center"></div>
-          <div className='bun-bottom'></div>
-        </label>
-
         <nav className="menu_box">
           <NavLink to = '/' className="nav-link"> Home </NavLink>
           <NavLink to={`/profile_page/${user.id}`} className="nav-link"> Profile Page</NavLink>
           <NavLink onClick={handleLogOut} to='/' className="nav-link">Sign Out</NavLink>
         </nav>
-      </div>
     )
   }
 
@@ -34,7 +25,7 @@ const Nav = ({ authenticated, user, handleLogOut}) => {
         <marquee>
           <div className="marquee-content">
           <h4 id='nav-banner-text'> Having trouble being the very best? PokePro is here for you</h4>
-          <img src='https://toppng.com/uploads/preview/master-ball-the-best-poke-ball-transparent-background-pokemon-balls-11562943853enmb9crbnb.png'
+          <img src='https://thumbs.gfycat.com/GenerousTimelyBrontosaurus-max-1mb.gif'
           className="marquee-image" alt="not found"></img>
           </div>
         </marquee>
