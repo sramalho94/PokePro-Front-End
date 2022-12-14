@@ -47,11 +47,10 @@ const AddToTeamForm = () => {
           <select
             onChange={handleChange}
             name="pokemon_id"
-            value={formValues.pokemon_id}
             id="pokemon_id"
             required
           >
-            <option value=" ">Choose a Pokemon</option>
+            <option value="">Choose a Pokemon</option>
             {pokemons?.map((pokemon) => (
               <option value={parseInt(pokemon.id)} key={pokemon.id}>
                 {pokemon.name}
