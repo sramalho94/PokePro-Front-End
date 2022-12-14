@@ -15,6 +15,7 @@ const Nav = ({ authenticated, user, handleLogOut}) => {
 
         <nav className="menu_box">
           <NavLink to = '/' className="nav-link"> Home </NavLink>
+          <NavLink to={`/profile_page/${user.id}`} className="nav-link"> Profile Page</NavLink>
           <NavLink onClick={handleLogOut} to='/' className="nav-link">Sign Out</NavLink>
         </nav>
       </div>
