@@ -27,13 +27,19 @@ html {
   border: none;
   box-shadow: none;
 }
+.nav-link{
+  color: #F6CF57;
+  margin: 5px;
+}
 
 .nav-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-y: hidden;
-  
+  background: rgb(240,240,240);
+  background: linear-gradient(95deg, rgba(240,240,240,1) 0%, rgba(34,34,36,1) 50%, rgba(240,0,0,1) 100%);
+  border-bottom: 2px solid #F6CF57;
 }
 
 #nav-content{
@@ -41,8 +47,6 @@ html {
   justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  
-  border-bottom: 2px solid rgb(200, 198, 198);
   margin: .2rem 1%;
   overflow-y: hidden;
   
@@ -56,10 +60,14 @@ html {
   flex-direction: row;
   justify-content: flex-start;
   /* align-items: center; */
-  background: rgb(215,129,106);
-  background: linear-gradient(100deg, rgba(215,129,106,1) 0%, rgb(134, 51, 54) 100%);
+  background: rgb(240,0,0);
+  background: linear-gradient(95deg, rgba(240,0,0,1) 0%, rgba(34,34,36,1) 50%, rgba(240,240,240,1) 100%);
   padding: .2rem;
   color: white;
+}
+
+#nav-banner-text{
+  color: #F6CF57
 }
 
 .marquee-image{
@@ -94,6 +102,7 @@ html {
 #home-container{
   display: flex;
   flex-direction: column;
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/30609d00-6ab9-4663-92c6-1c6ef420ec93/d7fnicu-3af68e74-0fc9-470b-bb53-1d34ba2a6342.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMwNjA5ZDAwLTZhYjktNDY2My05MmM2LTFjNmVmNDIwZWM5M1wvZDdmbmljdS0zYWY2OGU3NC0wZmM5LTQ3MGItYmI1My0xZDM0YmEyYTYzNDIuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.fSkemIDuC4ciDVGEkX4en7Q5R44AqDmIRUDxQrY2M3I");
 }
 
 #greet-user{
@@ -109,6 +118,14 @@ html {
   row-gap: .5rem;
   align-items: center;
   justify-content: center;
+}
+#greet-user{
+  display: flex;
+  color: #702963;
+  font-weight: bold;
+  justify-content: center;
+  font-size: 1.3rem;
+  text-shadow: 2px 4px 2px white;
 }
 /* Search */
 
@@ -129,4 +146,19 @@ html {
 .trainer-image{
   height: 8rem;
   width: 5.5rem
+}
+.image-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border:3px solid black;
+  padding: .4rem;
+  border-radius: 75px;
+  background: rgb(240,0,0);
+  background: linear-gradient(142deg, rgba(240,0,0,1) 0%, rgba(34,34,36,1) 50%, rgba(240,240,240,1) 100%);
+}
+.trainer-name-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
