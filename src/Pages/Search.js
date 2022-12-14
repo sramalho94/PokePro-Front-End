@@ -37,25 +37,30 @@ const Search = ({ trainersData }) => {
     getTrainer()
   }
 
+  const handleHide = () => {
+    setTrainer(null)
+  }
+
   return (
     <div className="search-container">
       <div className="search-bar-container">
         <form onSubmit={handleSubmit}>
           <div className="input-wrapper">
             <label className="form-header" htmlFor="id">
-              Search A Trainer
+              Search A Trainer:
             </label>
             <select onChange={handleChange} name="id" required>
               <option value=""> Trainers </option>
               {trainers?.map((trainer) => (
-                <option key={trainer.id} value={trainer.id}>
+                <option key={trainer.id} value={trainer.id} className="option">
                   {trainer.name}
                 </option>
               ))}
             </select>
+            <button> Search </button>
           </div>
-          <button> Search </button>
         </form>
+
         {trainer && (
           <div>
             <h1>Search Results</h1>
@@ -67,6 +72,7 @@ const Search = ({ trainersData }) => {
               sprite={trainer?.sprite}
             />
             <h1>End of Search Results</h1>
+            <button onClick={handleHide}>Hide Search</button>
           </div>
         )}
       </div>
