@@ -89,3 +89,44 @@ html {
 .team-trainer-image{
   height: 6rem
 }
+
+/* Home */
+#home-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#greet-user{
+  font-size: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.home-main{
+  display: grid;
+  grid-template-columns: 10rem 10rem;
+  grid-template-rows: 13rem 13rem 13rem;
+  column-gap: .5rem;
+  row-gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+/* Search */
+
+.search-bar-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.option{
+  font-size: .8rem;
+  width: .8rem;
+}
+/* Trainer */
+.trainer-card{}
+
+.trainer-image{
+  height: 8rem;
+  width: 5.5rem
+}
