@@ -5,7 +5,7 @@ import Client from '../services/api'
 import axios from 'axios'
 import Pokemon from '../components/Pokemon'
 
-const TrainerTeam = ({ name }) => {
+const TrainerTeam = () => {
   const { id } = useParams()
   const [teams, setTeams] = useState(null)
   const [trainer, setTrainer] = useState(null)
@@ -13,17 +13,25 @@ const TrainerTeam = ({ name }) => {
   useEffect(() => {
     const getTeams = async () => {
       const response = await Client.get(
-        `http://localhost:3001/api/teams/trainer/${id}`
+        `https://pokepro-backend.herokuapp.com/api/teams/trainer/${id}`
       )
       setTrainer(response.data)
       setTeams(response.data.pokemon_team)
     }
     getTeams()
   }, [])
+
   return teams !== null ? (
     <div className="team-container">
       <h1>{trainer.name}'s team</h1>
-      <img src={trainer.image} className="team-trainer-image" />
+      <div>
+        <Link to={`/add_to_team/${id}`}>
+          <button> Add to team </button>
+        </Link>
+      </div>
+      {trainer.sprite && (
+        <img src={trainer.sprite} className="team-trainer-sprite" />
+      )}
       <div className="team-lineup">
         {teams?.map((pokemon) => (
           <Pokemon
@@ -32,6 +40,7 @@ const TrainerTeam = ({ name }) => {
             name={pokemon?.name}
             image={pokemon?.image}
             types={pokemon?.types}
+            sprite={pokemon?.sprite}
             trainer={trainer.id}
           />
         ))}
