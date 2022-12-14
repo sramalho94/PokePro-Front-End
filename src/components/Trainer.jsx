@@ -12,7 +12,9 @@ const Trainer = ({id, name, image, sprite }) => {
         name = {name}
         sprite = {sprite}
         >
-        <h2>{` Trainer: ${name}`}</h2>
+          <div className='trainer-name-container'>
+        <h2>{`${name}`}</h2>
+        </div>
         </Link>
       </div>
     </div>
