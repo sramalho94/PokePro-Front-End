@@ -19,6 +19,24 @@ export const RegisterUser = async (data) => {
   }
 }
 
+export const AddToTeam = async (data) => {
+  try {
+    const res = await Client.post(`/teams/new_team/${data.id}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
+export const UpdateUser = async (data) => {
+  try {
+    const res = await Client.put(`/users/${data.id}`, data)
+    return res.data
+  } catch (error) {
+    throw error
+  }
+}
+
 export const CheckSession = async () => {
   try {
     const res = await Client.get('/users/session')
