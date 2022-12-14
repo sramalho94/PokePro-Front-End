@@ -1,16 +1,21 @@
 import React from 'react'
 import { useState } from 'react'
+import Client from '../services/api'
 
-const Pokemon = ({id, name, image, types, trainer }) => {
+const Pokemon = ({id, name, image, types, trainer, sprite }) => {
   
   const [counterType, setCounterType] = useState('')
+
+  const handleDelete = async() => {
+    const response = await Client.delete(`https://pokepro-backend.herokuapp.com/api/teams/trainer/${trainer}/pokemon/${id}`)
+  }
   
   return (
     <div className='pokemon-card'>
+      <button onClick={handleDelete}> Remove From Team</button>
       <h2>{name}</h2>
-      {console.log(name)}
       <div className='image-wrapper'>
-        <img src={image}/>
+        <img src={sprite}/>
         <div className='pokemon-types'>
         {types?.map((type)=>(
           <div key={type}>
