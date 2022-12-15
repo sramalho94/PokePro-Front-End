@@ -41,6 +41,12 @@ const AddToTeamForm = () => {
     <div className="add-to-team-container">
       <form onSubmit={handleSubmit}>
         <div className="input-wrapper">
+          <div>
+            <img
+              src="https://archives.bulbagarden.net/media/upload/6/6f/Spr_5b_038.png"
+              alt="ninetails"
+            />
+          </div>
           <label htmlFor="pokemon_id" className="form-header">
             Pokemon:
           </label>
@@ -49,9 +55,11 @@ const AddToTeamForm = () => {
             name="pokemon_id"
             id="pokemon_id"
             required
-            className="select"
+            className="input"
           >
-            <option value="">Choose a Pokemon</option>
+            <option value="" className="choose-pokemon">
+              Choose a Pokemon
+            </option>
             {pokemons?.map((pokemon) => (
               <option
                 value={parseInt(pokemon.id)}
@@ -63,7 +71,7 @@ const AddToTeamForm = () => {
             ))}
           </select>
         </div>
-        <button type="submit" className="form-button">
+        <button type="submit" className="button">
           {' '}
           Submit{' '}
         </button>
