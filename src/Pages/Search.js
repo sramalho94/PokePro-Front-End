@@ -63,7 +63,7 @@ const Search = ({ trainersData }) => {
 
         {trainer && (
           <div>
-            <h1>Search Results</h1>
+            <div>Search Results</div>
             <Trainer
               key={trainer.id}
               id={trainer.id}
@@ -71,8 +71,10 @@ const Search = ({ trainersData }) => {
               image={trainer.image}
               sprite={trainer?.sprite}
             />
-            <h1>End of Search Results</h1>
-            <button onClick={handleHide}>Hide Search</button>
+            <div>End of Search Results</div>
+            <button onClick={handleHide} className="button">
+              Hide Search
+            </button>
           </div>
         )}
       </div>
