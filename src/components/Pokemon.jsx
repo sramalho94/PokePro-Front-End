@@ -11,7 +11,7 @@ const Pokemon = ({id, name, image, types, trainer, sprite, getTeams}) => {
   return (
     <div className='pokemon-card'>
       <div className='remove-pokemon-button'>
-      <button onClick={handleDelete}> Remove</button>
+      <button onClick={handleDelete} className="button"> Remove</button>
       </div>
       <div className='pokemon-name-wrapper'>
       <h2>{name}</h2>
