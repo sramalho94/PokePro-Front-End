@@ -36,6 +36,12 @@ const EditUserPage = () => {
   }
   return (
     <div className="User-Info-container">
+      <div>
+        <img
+          src="https://archives.bulbagarden.net/media/upload/3/3d/Spr_5b_009.png"
+          alt="blastoise"
+        />
+      </div>
       <form onSubmit={handleSubmit} className="info-form">
         <div className="input-wrapper">
           <label htmlFor="userName" className="form-header">
@@ -76,7 +82,7 @@ const EditUserPage = () => {
             className="input"
           />
         </div>
-        <button type="submit" className="form-button">
+        <button type="submit" className="button">
           {' '}
           Submit{' '}
         </button>
