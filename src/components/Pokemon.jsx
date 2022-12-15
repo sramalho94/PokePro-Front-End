@@ -10,14 +10,20 @@ const Pokemon = ({id, name, image, types, trainer, sprite, getTeams}) => {
   
   return (
     <div className='pokemon-card'>
-      <button onClick={handleDelete}> Remove From Team</button>
+      <div className='remove-pokemon-button'>
+      <button onClick={handleDelete}> Remove</button>
+      </div>
+      <div className='pokemon-name-wrapper'>
       <h2>{name}</h2>
-      <div className='image-wrapper'>
+      </div>
+      <div className='pokemon-wrapper'>
+        <div className='pokemon-image-wrapper'>
         <img src={sprite}/>
+        </div>
         <div className='pokemon-types'>
         {types?.map((type)=>(
           <div key={type}>
-          <h1 >{type}</h1>
+          <div className='type-text'>{type}</div>
           <div> Weak Against:</div>
           {type === "grass" &&
             <div className='type-counter-text'> Fire type</div>
