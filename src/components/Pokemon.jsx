@@ -14,7 +14,7 @@ const Pokemon = ({id, name, image, types, trainer, sprite, getTeams}) => {
       <button onClick={handleDelete} className="button"> Remove</button>
       </div>
       <div className='pokemon-name-wrapper'>
-      <h2>{name}</h2>
+      <h2 className='header-text'>{name}</h2>
       </div>
       <div className='pokemon-wrapper'>
         <div className='pokemon-image-wrapper'>
