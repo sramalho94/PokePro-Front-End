@@ -83,7 +83,7 @@ const Register = () => {
           <div className="submit-button-container">
             <button
               type="submit"
-              className="submit-button"
+              className="button"
               disabled={
                 !formValues.userName ||
                 (!formValues.password &&
