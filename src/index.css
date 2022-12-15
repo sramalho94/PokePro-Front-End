@@ -32,6 +32,11 @@ html {
   background: linear-gradient(95deg, rgba(240,240,240,1) 0%, rgba(34,34,36,1) 50%, rgba(240,0,0,1) 100%);
 }
 
+.input{
+  border-radius: 70px;
+  background-color: #F6CF57;
+}
+
 /* Nav */
 .logo{
   width: 2rem;
@@ -252,8 +257,11 @@ html {
 
 .add-to-team-container{
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 50rem;
+  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
 }
 
 .option{
@@ -268,4 +276,44 @@ html {
 }
 .select:click{ 
   font-size: 50px;
+}
+
+/* Profile Page */
+.user-page-container{
+  display: flex;
+  flex-direction: column;
+  padding-top: 15rem;
+  align-items: center;
+  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  height: 50rem;
+}
+.user-page-header{
+  font-size: 2rem;
+}
+
+.user-page-image{
+  width: 13rem;
+  height:13rem;
+  border-radius: 100px
+}
+.user-page-image-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Edit User Page */
+.User-Info-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  height: 50rem;
+}
+
+.info-form{
+  background-color: #89CFF0;
+  padding: 20px;
+  border-radius: 60px;
 }
