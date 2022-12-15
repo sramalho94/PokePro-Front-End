@@ -68,19 +68,6 @@ const EditUserPage = () => {
             className="input"
           />
         </div>
-        {/* <div className="input-wrapper">
-          <label htmlFor="password" className="form-header">
-            New Password:
-          </label>
-          <input
-            type="text"
-            id="passwordDigest"
-            onChange={handleChange}
-            value={formState.password}
-            required
-            className="input"
-          />
-        </div> */}
         <button type="submit" className="button">
           {' '}
           Submit{' '}
