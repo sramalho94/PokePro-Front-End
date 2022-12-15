@@ -13,7 +13,7 @@ const Trainer = ({id, name, image, sprite }) => {
         sprite = {sprite}
         >
           <div className='trainer-name-container'>
-        <h2>{`${name}`}</h2>
+        <h2 className='header-text'>{`${name}`}</h2>
         </div>
         </Link>
       </div>
