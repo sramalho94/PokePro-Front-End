@@ -11,7 +11,6 @@ const EditUserPage = () => {
   const intitialState = {
     userName: '',
     image: '',
-    passwordDigest: '',
     id: id
   }
 
@@ -69,7 +68,7 @@ const EditUserPage = () => {
             className="input"
           />
         </div>
-        <div className="input-wrapper">
+        {/* <div className="input-wrapper">
           <label htmlFor="password" className="form-header">
             New Password:
           </label>
@@ -81,7 +80,7 @@ const EditUserPage = () => {
             required
             className="input"
           />
-        </div>
+        </div> */}
         <button type="submit" className="button">
           {' '}
           Submit{' '}
