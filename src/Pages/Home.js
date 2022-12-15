@@ -47,7 +47,7 @@ const Home = ({ user, authenticated }) => {
       <h3 className="protected-prompt">
         To be the very best you must be logged in!
       </h3>
-      <button className="form-button" onClick={() => navigate('/login')}>
+      <button className="button" onClick={() => navigate('/login')}>
         Login
       </button>
     </div>
