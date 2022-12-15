@@ -49,7 +49,7 @@ const Login = ({ toggleAuthenticated, setUser }) => {
           </div>
           <button
             disabled={!formValues.userName || !formValues.password}
-            className="form-button"
+            className="button"
           >
             Login
           </button>
