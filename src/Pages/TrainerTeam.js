@@ -26,11 +26,13 @@ const TrainerTeam = () => {
       <h1>{trainer.name}'s team</h1>
       <div>
         <Link to={`/add_to_team/${id}`}>
-          <button> Add to team </button>
+          <button className="button"> Add to team </button>
         </Link>
       </div>
       {trainer.sprite && (
-        <img src={trainer.sprite} className="team-trainer-sprite" />
+        <div className="trainer-sprite-wrapper">
+          <img src={trainer.sprite} className="team-trainer-sprite" />
+        </div>
       )}
       <div className="team-lineup">
         {teams?.map((pokemon) => (
