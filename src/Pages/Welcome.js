@@ -6,10 +6,9 @@ const Welcome = () => {
     <div className="welcome-container">
       <header className="welcome-header-container">
         <img
-          src="https://www.serebii.net/letsgopikachueevee/pokemon/025-crown.png"
+          src="https://archives.bulbagarden.net/media/upload/7/73/Spr_5b_150.png"
           alt="website logo"
           className="welcome-logo"
-          width="10rem"
         />
         <div className="welcome-text">
           <h2>Poke Pro</h2>

@@ -30,6 +30,10 @@ const Register = () => {
 
   return (
     <div className="register-container">
+      <img
+        src="https://archives.bulbagarden.net/media/upload/6/6d/Spr_5b_093.png"
+        alt="haunter"
+      />
       <div className="card-overlay">
         <form className="form-items" onSubmit={handleSubmit}>
           <div className="input-wrapper">
