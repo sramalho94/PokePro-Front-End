@@ -13,16 +13,26 @@ const Welcome = () => {
         />
         <div className="welcome-text">
           <h2>Poke Pro</h2>
-          <h4 className="welcome-text"> Please follow Community Guidelines </h4>
+          <h4 className="header-text"> Please follow Community Guidelines </h4>
+          <h3>
+            {' '}
+            Only Change A Trainer's Roster if it is officially changed in game
+          </h3>
+          <h3> Don't be toxic</h3>
+          <h3>
+            {' '}
+            We will be adding an Add Pokemon feature, please only add official
+            pokemon
+          </h3>
+          <div id="welcome-button-container">
+            <Link to="/">
+              <button className="button"> I AGREE </button>
+            </Link>
+          </div>
         </div>
       </header>
       <div className="welcome-body-container">
         <div className="welcome-body-text-container"></div>
-        <div id="welcome-button-container">
-          <Link to="/">
-            <button id="welcome-button"> I AGREE </button>
-          </Link>
-        </div>
       </div>
     </div>
   )
