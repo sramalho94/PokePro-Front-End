@@ -24,7 +24,6 @@ const Search = ({ trainersData }) => {
     const response = await Client.get(
       `https://pokepro-backend.herokuapp.com/api/trainers/id/${formValues.id}`
     )
-    console.log(response.data)
     setTrainer(response.data)
   }
 
