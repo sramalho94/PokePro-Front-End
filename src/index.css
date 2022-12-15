@@ -37,6 +37,10 @@ html {
   background-color: #F6CF57;
 }
 
+.header-text{
+  font-family: 'Rubik Puddles', cursive;
+}
+
 /* Nav */
 .logo{
   width: 2rem;
@@ -166,6 +170,16 @@ html {
   justify-content: center;
   font-size: 1.3rem;
   text-shadow: 2px 4px 2px white;
+}
+
+.protected{
+  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
 }
 /* Search */
 
@@ -316,4 +330,34 @@ html {
   background-color: #89CFF0;
   padding: 20px;
   border-radius: 60px;
+}
+
+/* Login */
+.login-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  height: 50rem;
+}
+
+/* Welcome */
+.welcome-header-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  height: 50rem;
+}
+
+/* Register */
+.register-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  height: 50rem;
 }
