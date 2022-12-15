@@ -16,13 +16,26 @@ html {
   display: none;
 }
 
+.button{
+  border: 1px solid black;
+  border-radius: 80px;
+  padding: 2px;
+}
+
+.button:hover{
+  background: rgb(240,240,240);
+  background: linear-gradient(95deg, rgba(240,240,240,1) 0%, rgba(34,34,36,1) 50%, rgba(240,0,0,1) 100%);
+}
+
+.button:click{
+  background: rgb(240,240,240);
+  background: linear-gradient(95deg, rgba(240,240,240,1) 0%, rgba(34,34,36,1) 50%, rgba(240,0,0,1) 100%);
+}
+
 /* Nav */
 .logo{
   width: 2rem;
   height: auto;
-  /* margin: 0 2rem;
-  padding: .2rem 1rem; */
-  /* gap: 1rem; */
   object-fit: fill;
   border: none;
   box-shadow: none;
@@ -59,7 +72,6 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  /* align-items: center; */
   background: rgb(240,0,0);
   background: linear-gradient(95deg, rgba(240,0,0,1) 0%, rgba(34,34,36,1) 50%, rgba(240,240,240,1) 100%);
   padding: .2rem;
@@ -89,13 +101,36 @@ html {
 }
 
 /* Trainer Team */
+.team-container{
+  background: #C8A2C8;
+  height: 60rem;
+}
 .team-lineup{
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 10rem 10rem;
+  grid-template-rows: 13rem 13rem 13rem;
+  column-gap: 2rem;
+  row-gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
 }
 
 .team-trainer-image{
   height: 6rem
+}
+
+.trainer-sprite-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.team-trainer-sprite{
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 25px;
+  background-color: #89CFF0;
 }
 
 /* Home */
@@ -161,4 +196,76 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Pokemon */
+.pokemon-card{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+.pokemon-wrapper{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+.pokemon-name-wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.remove-pokemon-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex;
+  align-items: flex;
+}
+.type-text{
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 25px;
+  background: #ffffe0 ;
+  margin: 5px;
+  padding: 3px;
+}
+.pokemon-types{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pokemon-image-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 100px;
+  margin-right: 5px;
+  background: #FFCCCB;
+}
+
+.add-to-team-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option{
+  font-size: 50px;
+}
+
+.select{
+  font-size: 20px;
+}
+.choose-pokemon{
+  font-size:60px !important
+}
+.select:click{ 
+  font-size: 50px;
 }
