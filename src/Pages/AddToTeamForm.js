@@ -49,10 +49,15 @@ const AddToTeamForm = () => {
             name="pokemon_id"
             id="pokemon_id"
             required
+            className="select"
           >
             <option value="">Choose a Pokemon</option>
             {pokemons?.map((pokemon) => (
-              <option value={parseInt(pokemon.id)} key={pokemon.id}>
+              <option
+                value={parseInt(pokemon.id)}
+                key={pokemon.id}
+                className="option"
+              >
                 {pokemon.name}
               </option>
             ))}
