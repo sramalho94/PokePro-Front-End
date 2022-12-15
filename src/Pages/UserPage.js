@@ -35,12 +35,14 @@ const UserPage = ({ user, handleLogOut }) => {
         {' '}
         {`Welcome ${userDetails?.userName}`}{' '}
       </div>
-      <div className="user-page-image">
-        <img src={userDetails?.image} />
+      <div className="user-page-image-wrapper">
+        <img src={userDetails?.image} className="user-page-image" />
         <Link to={`/edit_info/${id}`}>
-          <button>Edit Info</button>
+          <button className="button">Edit Info</button>
+          <button onClick={handleDelete} className="button">
+            Delete User
+          </button>
         </Link>
-        <button onClick={handleDelete}> Delete User </button>
       </div>
     </div>
   )
