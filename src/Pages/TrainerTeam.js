@@ -23,7 +23,7 @@ const TrainerTeam = () => {
 
   return teams !== null ? (
     <div className="team-container">
-      <h1>{trainer.name}'s team</h1>
+      <h1 className="header-text">{trainer.name}'s team</h1>
       <div>
         <Link to={`/add_to_team/${id}`}>
           <button className="button"> Add to team </button>
