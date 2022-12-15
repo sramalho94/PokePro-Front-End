@@ -57,7 +57,7 @@ const Search = ({ trainersData }) => {
                 </option>
               ))}
             </select>
-            <button> Search </button>
+            <button className="button"> Search </button>
           </div>
         </form>
 
