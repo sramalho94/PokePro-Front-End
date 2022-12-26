@@ -11,6 +11,8 @@ import TrainerTeam from './Pages/TrainerTeam'
 import UserPage from './Pages/UserPage'
 import EditUserPage from './Pages/EditUserPage'
 import AddToTeamForm from './Pages/AddToTeamForm'
+import AddPokemonForm from './Pages/AddPokemonForm'
+import PokemonList from './Pages/PokemonList'
 
 function App() {
   const [authenticated, toggleAuthenticated] = useState(false)
@@ -73,6 +75,8 @@ function App() {
             />
             <Route path="/edit_info/:id" element={<EditUserPage />} />
             <Route path="/add_to_team/:id" element={<AddToTeamForm />} />
+            <Route path="/create_pokemon" element={<AddPokemonForm />} />
+            <Route path="/pokemon" element={<PokemonList />} />
           </Routes>
         </main>
       </div>
