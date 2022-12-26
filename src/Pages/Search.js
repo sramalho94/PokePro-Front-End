@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import Client from '../services/api'
 import Trainer from '../components/Trainer'
 
-const Search = ({ trainersData }) => {
+const Search = () => {
   const initialState = {
     id: null
   }
@@ -13,10 +13,14 @@ const Search = ({ trainersData }) => {
   const [trainer, setTrainer] = useState(null)
   const [formValues, setFormValues] = useState(initialState)
 
+  const getTrainers = async () => {
+    const response = await Client.get(
+      `https://pokepro-backend.herokuapp.com/api/trainers/`
+    )
+    setTrainers(response.data)
+  }
+
   useEffect(() => {
-    const getTrainers = async () => {
-      setTrainers(trainersData)
-    }
     getTrainers()
   }, [])
 
@@ -52,7 +56,7 @@ const Search = ({ trainersData }) => {
               <option value=""> Trainers </option>
               {trainers?.map((trainer) => (
                 <option key={trainer.id} value={trainer.id} className="option">
-                  {trainer.name}
+                  {trainer?.name}
                 </option>
               ))}
             </select>
