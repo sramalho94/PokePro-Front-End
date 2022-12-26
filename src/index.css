@@ -146,7 +146,8 @@ html {
 #home-container{
   display: flex;
   flex-direction: column;
-  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  background-image: url("https://i.imgur.com/a5TxJlY.png");
+  width:100%;
 }
 
 #greet-user{
@@ -173,7 +174,7 @@ html {
 }
 
 .protected{
-  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  background-image: url("https://i.imgur.com/a5TxJlY.png");
   height: 50rem;
   display: flex;
   flex-direction: column;
@@ -275,7 +276,7 @@ html {
   align-items: center;
   justify-content: center;
   height: 50rem;
-  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  background-image: url("https://i.imgur.com/a5TxJlY.png");
 }
 
 .option{
@@ -298,7 +299,7 @@ html {
   flex-direction: column;
   padding-top: 15rem;
   align-items: center;
-  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  background-image: url("https://i.imgur.com/a5TxJlY.png");
   height: 50rem;
 }
 .user-page-header{
@@ -322,7 +323,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  background-image: url("https://i.imgur.com/a5TxJlY.png");
   height: 50rem;
 }
 
@@ -338,7 +339,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  background-image: url("https://i.imgur.com/a5TxJlY.png");
   height: 50rem;
 }
 
@@ -348,7 +349,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  background-image: url("https://i.imgur.com/a5TxJlY.png");
   height: 50rem;
 }
 
@@ -358,6 +359,45 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("https://i.imgur.com/SoC4QoN.jpg");
+  background-image: url("https://i.imgur.com/a5TxJlY.png");
   height: 50rem;
+}
+/* Add Pokemon Form */
+.add-pokemon-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://i.imgur.com/a5TxJlY.png");
+  height: 50rem
+}
+/* Pokemon List */
+.pokemon-list-container{
+  background-image: url("https://i.imgur.com/a5TxJlY.png")
+}
+.pokemon-list{
+  display: grid;
+  grid-template-columns: 10rem 10rem;
+  grid-template-rows: 13rem 13rem 13rem;
+  column-gap: .5rem;
+  row-gap: .5rem;
+  align-items: center;
+  justify-content: center;
+}
+/* Pokemon Card */
+.pokemon-card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+.pokemon-image{
+  height: 8rem;
+  width: 5.5rem
+}
+.type-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
