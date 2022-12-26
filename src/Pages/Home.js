@@ -10,13 +10,15 @@ const Home = ({ user, authenticated }) => {
 
   const [trainers, setTrainers] = useState(null)
 
+  const getTrainers = async () => {
+    const response = await axios.get(
+      'https://pokepro-backend.herokuapp.com/api/trainers/'
+    )
+    setTrainers(response.data)
+    console.log('getTrainers in Home fired')
+  }
+
   useEffect(() => {
-    const getTrainers = async () => {
-      const response = await axios.get(
-        'https://pokepro-backend.herokuapp.com/api/trainers/'
-      )
-      setTrainers(response.data)
-    }
     getTrainers()
   }, [])
 
@@ -28,7 +30,7 @@ const Home = ({ user, authenticated }) => {
         </h2>
       </header>
       <div className="search-component-container">
-        <Search trainersData={trainers} />
+        <Search />
       </div>
       <main className="home-main">
         {trainers?.map((trainer) => (
@@ -38,6 +40,7 @@ const Home = ({ user, authenticated }) => {
             name={trainer.name}
             image={trainer.image}
             sprite={trainer?.sprite}
+            getTrainerData={getTrainers}
           />
         ))}
       </main>
