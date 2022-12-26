@@ -9,6 +9,7 @@ const Nav = ({ authenticated, user, handleLogOut}) => {
           <NavLink to = '/' className="nav-link"> Home </NavLink>
           <NavLink to={`/profile_page/${user.id}`} className="nav-link"> Profile Page</NavLink>
           <NavLink onClick={handleLogOut} to='/' className="nav-link">Sign Out</NavLink>
+          <NavLink to="/pokemon" className="nav-link">Pokemon</NavLink>
         </nav>
     )
   }
