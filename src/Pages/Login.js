@@ -53,6 +53,7 @@ const Login = ({ toggleAuthenticated, setUser }) => {
           >
             Login
           </button>
+          <h5>userName: admin password:admin</h5>
           <span id="register-container">
             <h3> Don't have an account? &nbsp;</h3>
             <Link to="/register"> Register Here </Link>
