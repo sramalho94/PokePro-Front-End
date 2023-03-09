@@ -22,17 +22,18 @@ const Home = ({ user, authenticated }) => {
     getTrainers()
   }, [])
 
+  const divStyle = {
+    backgroundImage: 'url(/background.png)'
+  }
   return user && authenticated ? (
-    <div id="home-container">
-      <header className="home-header">
-        <h2 id="greet-user">
-          I know you'll be a Pokemon master, {user.userName}!
-        </h2>
+    <div id="home-container" style={divStyle}>
+      <header className="flex flex-row justify-center text-xl font-bold text-[#ee1515] md:text-4xl">
+        <h2>I know you'll be a Pokemon master, {user.userName}!</h2>
       </header>
       <div className="search-component-container">
         <Search />
       </div>
-      <main className="home-main">
+      <main className="home-main grid grid-cols-2 lg:grid-cols-3">
         {trainers?.map((trainer) => (
           <Trainer
             key={trainer.id}
@@ -46,7 +47,7 @@ const Home = ({ user, authenticated }) => {
       </main>
     </div>
   ) : (
-    <div className="protected">
+    <div className="protected" style={divStyle}>
       <h3 className="protected-prompt">
         To be the very best you must be logged in!
       </h3>

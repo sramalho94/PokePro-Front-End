@@ -1,20 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Trainer = ({id, name, image, sprite }) => {
+const Trainer = ({ id, name, image, sprite }) => {
   return (
-    <div className='trainer-card' key={id}>
-      <div className='image-wrapper'>
-        <img src={image} alt={`Pic of trainer: ${name}`} className="trainer-image"/>
+    <div className="w-full p-2" key={id}>
+      <div className="flex flex-row justify-center">
+        <img src={image} alt={`Pic of trainer: ${name}`} className="h-52" />
       </div>
-      <div className='trainer-info'>
-        <Link to={`trainer_team/${id}`} 
-        name = {name}
-        sprite = {sprite}
+      <div className="p-2">
+        <Link
+          to={`trainer_team/${id}`}
+          name={name}
+          sprite={sprite}
+          className="flex flex-row justify-center"
         >
-          <div className='trainer-name-container'>
-        <h2 className='header-text'>{`${name}`}</h2>
-        </div>
+          <h2 className="font-bold p-1 bg-white rounded-xl">{`${name}`}</h2>
         </Link>
       </div>
     </div>
