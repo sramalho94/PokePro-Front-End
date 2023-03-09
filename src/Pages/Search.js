@@ -45,14 +45,19 @@ const Search = () => {
   }
 
   return (
-    <div className="search-container">
-      <div className="search-bar-container">
+    <div className="flex flex-row justify-center py-3">
+      <div>
         <form onSubmit={handleSubmit}>
-          <div className="input-wrapper">
-            <label className="form-header" htmlFor="id">
+          <div>
+            <label className="mr-3  font-bold" htmlFor="id">
               Search A Trainer:
             </label>
-            <select onChange={handleChange} name="id" required>
+            <select
+              onChange={handleChange}
+              name="id"
+              required
+              className="mr-3 "
+            >
               <option value=""> Trainers </option>
               {trainers?.map((trainer) => (
                 <option key={trainer.id} value={trainer.id} className="option">
@@ -60,7 +65,10 @@ const Search = () => {
                 </option>
               ))}
             </select>
-            <button className="button"> Search </button>
+            <button className="p-1 bg-[#ee1515] rounded-lg hover:bg-white">
+              {' '}
+              Search{' '}
+            </button>
           </div>
         </form>
 
