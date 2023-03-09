@@ -65,7 +65,7 @@ const Search = () => {
                 </option>
               ))}
             </select>
-            <button className="p-1 bg-[#ee1515] rounded-lg hover:bg-white">
+            <button className="p-1 mb-3 bg-[#ee1515] rounded-lg hover:bg-white">
               {' '}
               Search{' '}
             </button>
@@ -73,8 +73,10 @@ const Search = () => {
         </form>
 
         {trainer && (
-          <div>
-            <div>Search Results</div>
+          <div className="flex flex-col align-middle p-3 bg-red-400 rounded-lg">
+            <div className="text-center font-bold md:text-2xl ">
+              Search Result
+            </div>
             <Trainer
               key={trainer.id}
               id={trainer.id}
@@ -82,7 +84,7 @@ const Search = () => {
               image={trainer.image}
               sprite={trainer?.sprite}
             />
-            <div>End of Search Results</div>
+
             <button onClick={handleHide} className="button">
               Hide Search
             </button>
