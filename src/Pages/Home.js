@@ -33,7 +33,7 @@ const Home = ({ user, authenticated }) => {
       <div className="search-component-container">
         <Search />
       </div>
-      <main className="home-main">
+      <main className="home-main grid grid-cols-2 lg:grid-cols-3">
         {trainers?.map((trainer) => (
           <Trainer
             key={trainer.id}
