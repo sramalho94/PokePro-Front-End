@@ -15,7 +15,6 @@ const Home = ({ user, authenticated }) => {
       'https://pokepro-backend.herokuapp.com/api/trainers/'
     )
     setTrainers(response.data)
-    console.log('getTrainers in Home fired')
   }
 
   useEffect(() => {
@@ -27,7 +26,7 @@ const Home = ({ user, authenticated }) => {
   }
   return user && authenticated ? (
     <div id="home-container" style={divStyle}>
-      <header className="flex flex-row justify-center text-xl font-bold text-[#ee1515] md:text-4xl">
+      <header className="flex flex-row justify-center text-xl p-2 font-bold text-[#ee1515] md:text-4xl">
         <h2>I know you'll be a Pokemon master, {user.userName}!</h2>
       </header>
       <div className="search-component-container">
