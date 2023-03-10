@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Client from '../services/api'
 import Pokemon from '../components/Pokemon'
 
@@ -10,16 +10,17 @@ const TrainerTeam = () => {
   const [trainer, setTrainer] = useState(null)
   const [deletePokemon, setDeletePokemon] = useState(false)
 
-  const getTeams = async () => {
+  const getTeams = useCallback(async () => {
     const response = await Client.get(
       `https://pokepro-backend.herokuapp.com/api/teams/trainer/${id}`
     )
     setTrainer(response.data)
     setTeams(response.data.pokemon_team)
-  }
+  }, [id, setTrainer, setTeams])
+
   useEffect(() => {
     getTeams()
-  }, [deletePokemon])
+  }, [deletePokemon, getTeams])
 
   return teams !== null ? (
     <div className="team-container">
@@ -31,7 +32,11 @@ const TrainerTeam = () => {
       </div>
       {trainer.sprite && (
         <div className="trainer-sprite-wrapper">
-          <img src={trainer.sprite} className="team-trainer-sprite" />
+          <img
+            src={trainer.sprite}
+            className="team-trainer-sprite"
+            alt={trainer.name}
+          />
         </div>
       )}
       <div className="team-lineup">
