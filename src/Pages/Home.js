@@ -41,6 +41,7 @@ const Home = ({ user, authenticated }) => {
             image={trainer.image}
             sprite={trainer?.sprite}
             getTrainerData={getTrainers}
+            divStyle={divStyle}
           />
         ))}
       </main>

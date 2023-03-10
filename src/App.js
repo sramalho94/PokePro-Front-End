@@ -36,6 +36,7 @@ function App() {
       checkToken()
     }
   }, [])
+
   return (
     <div>
       <div>
