@@ -20,16 +20,21 @@ const TrainerTeam = () => {
 
   useEffect(() => {
     getTeams()
-    console.log(divStyle)
   }, [deletePokemon, getTeams])
 
   const divStyle = {
     backgroundImage: 'url(/background.png)'
   }
 
+  const bgStyle = {
+    backgroundImage: 'url(/battlebg.jpg)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+  }
+
   return teams !== null ? (
-    <div className="team-container">
-      <h1 className="text-center text-2xl font-bold mt-5 md:mt-10 md:text-4xl">
+    <div id="team-container" className="bg-purple-300 h-screen" style={bgStyle}>
+      <h1 className="text-center text-2xl font-bold pt-5 md:mt-10 md:text-4xl">
         {trainer.name}'s team
       </h1>
       <div>
@@ -53,7 +58,7 @@ const TrainerTeam = () => {
           />
         </div>
       )}
-      <div className="team-lineup">
+      <div className="flex flex-wrap">
         {teams?.map((pokemon) => (
           <Pokemon
             id={pokemon?.id}
