@@ -22,10 +22,12 @@ const Home = ({ user, authenticated }) => {
   }, [])
 
   const divStyle = {
-    backgroundImage: 'url(/background.png)'
+    backgroundImage: 'url(/background.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
   }
   return user && authenticated ? (
-    <div id="home-container" style={divStyle}>
+    <div id="home-container" style={divStyle} className="h-screen">
       <header className="flex flex-row justify-center text-xl p-2 font-bold text-[#ee1515] md:text-4xl">
         <h2>I know you'll be a Pokemon master, {user.userName}!</h2>
       </header>
