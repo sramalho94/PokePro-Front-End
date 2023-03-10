@@ -20,22 +20,36 @@ const TrainerTeam = () => {
 
   useEffect(() => {
     getTeams()
+    console.log(divStyle)
   }, [deletePokemon, getTeams])
+
+  const divStyle = {
+    backgroundImage: 'url(/background.png)'
+  }
 
   return teams !== null ? (
     <div className="team-container">
-      <h1 className="header-text">{trainer.name}'s team</h1>
+      <h1 className="text-center text-2xl font-bold mt-5 md:mt-10 md:text-4xl">
+        {trainer.name}'s team
+      </h1>
       <div>
-        <Link to={`/add_to_team/${id}`}>
-          <button className="button"> Add to team </button>
+        <Link
+          to={`/add_to_team/${id}`}
+          className="flex flex-row justify-center my-1"
+        >
+          <button className="font-bold p-1 bg-red-400 rounded-xl">
+            {' '}
+            Add to team{' '}
+          </button>
         </Link>
       </div>
       {trainer.sprite && (
-        <div className="trainer-sprite-wrapper">
+        <div className="flex flex-row justify-center mt-3 md:mt-10 ">
           <img
             src={trainer.sprite}
-            className="team-trainer-sprite"
+            className="h-32 p-3 bg-red-300 rounded-xl md:h-64"
             alt={trainer.name}
+            style={divStyle}
           />
         </div>
       )}
