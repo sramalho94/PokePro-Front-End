@@ -33,8 +33,12 @@ const TrainerTeam = () => {
   }
 
   return teams !== null ? (
-    <div id="team-container" className="bg-purple-300 h-screen" style={bgStyle}>
-      <h1 className="text-center text-2xl font-bold pt-5 md:mt-10 md:text-4xl">
+    <div
+      id="team-container"
+      className="bg-purple-300 min-h-screen"
+      style={bgStyle}
+    >
+      <h1 className="text-center text-2xl font-bold pt-5 md:pt-10 md:text-4xl">
         {trainer.name}'s team
       </h1>
       <div>
@@ -58,7 +62,7 @@ const TrainerTeam = () => {
           />
         </div>
       )}
-      <div className="flex flex-wrap">
+      <div className="grid grid-cols-2 md:flex md:flex-row justify-around">
         {teams?.map((pokemon) => (
           <Pokemon
             id={pokemon?.id}
