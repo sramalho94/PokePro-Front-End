@@ -114,17 +114,9 @@ const Pokemon = ({ id, name, image, types, trainer, sprite, getTeams }) => {
         </div>
         <div className="pokemon-types">
           <p className="font-bold">type:</p>
-          <div
-            className="flex flex-wrap
-          "
-          >
+          <div className={`p-4 text-white rounded-lg border-white`}>
             {types.map((type) => (
-              <div
-                className={`p-1 text-black rounded-lg border-white bg-${type}`}
-                key={type}
-              >
-                {type}
-              </div>
+              <div key={type}>{type}</div>
             ))}
           </div>
           <p className="font-bold">Weak to:</p>
