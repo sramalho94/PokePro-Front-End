@@ -44,7 +44,7 @@ const UserPage = ({ user, handleLogOut }) => {
         <img
           src={userDetails?.image}
           className="h-48 w-58 rounded-3xl"
-          alt={userDetails.userName}
+          alt={userDetails?.userName}
         />
         <div className="flex flex-row justify-center m-3">
           <Link to={`/edit_info/${id}`}>
