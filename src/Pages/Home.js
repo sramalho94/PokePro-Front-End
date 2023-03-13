@@ -49,11 +49,17 @@ const Home = ({ user, authenticated }) => {
       </main>
     </div>
   ) : (
-    <div className="protected" style={divStyle}>
-      <h3 className="protected-prompt">
+    <div
+      className="flex flex-col justify-center align-middle min-h-screen"
+      style={divStyle}
+    >
+      <h3 className="text-center text-xl font-bold">
         To be the very best you must be logged in!
       </h3>
-      <button className="button" onClick={() => navigate('/login')}>
+      <button
+        className="m-1 p-1 rounded-lg bg-white mx-auto"
+        onClick={() => navigate('/login')}
+      >
         Login
       </button>
     </div>
