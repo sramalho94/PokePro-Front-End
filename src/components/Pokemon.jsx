@@ -52,7 +52,7 @@ const Pokemon = ({ id, name, image, types, trainer, sprite, getTeams }) => {
       <div className="flex flex-col pb-3">
         <div className="flex flex-row">
           {Array.from(weaknesses).map((weakness) => (
-            <p key={weakness} className="px-1">
+            <p key={weakness} className={`p-1 mx-1 bg-${weakness} rounded-xl`}>
               {weakness}
             </p>
           ))}
@@ -114,9 +114,11 @@ const Pokemon = ({ id, name, image, types, trainer, sprite, getTeams }) => {
         </div>
         <div className="pokemon-types">
           <p className="font-bold">type:</p>
-          <div className={`p-4 text-white rounded-lg border-white`}>
+          <div>
             {types.map((type) => (
-              <div key={type}>{type}</div>
+              <div key={type} className={`flex flex-row justify-center `}>
+                <p className={`p-1 bg-${type} rounded-xl`}>{type}</p>
+              </div>
             ))}
           </div>
           <p className="font-bold">Weak to:</p>
