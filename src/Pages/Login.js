@@ -19,12 +19,27 @@ const Login = ({ toggleAuthenticated, setUser }) => {
     navigate('/welcome')
   }
 
+  const divStyle = {
+    backgroundImage: 'url(/background.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+  }
+
   return (
-    <div className="login-container">
-      <div className="card-overlay">
-        <form onSubmit={handleSubmit} className="login-form">
+    <div
+      className="flex flex-col min-h-screen justify-center align-middle mx-auto my-auto"
+      style={divStyle}
+    >
+      <div className="flex flex-row justify-center">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col justify-center align-middle"
+        >
           <div className="input-wrapper">
-            <label htmlFor="userName"> UserName: </label>
+            <label htmlFor="userName" className="text-xl font-bold">
+              {' '}
+              UserName:{' '}
+            </label>
             <input
               onChange={handleChange}
               name="userName"
@@ -36,7 +51,9 @@ const Login = ({ toggleAuthenticated, setUser }) => {
             />
           </div>
           <div className="input-wrapper">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password" className="text-xl font-bold pr-3">
+              Password:
+            </label>
             <input
               onChange={handleChange}
               type="password"
@@ -49,14 +66,20 @@ const Login = ({ toggleAuthenticated, setUser }) => {
           </div>
           <button
             disabled={!formValues.userName || !formValues.password}
-            className="button"
+            className="m-1 p-1 rounded-lg bg-white mx-auto"
           >
             Login
           </button>
           <h5>userName: admin password:admin</h5>
           <span id="register-container">
-            <h3> Don't have an account? &nbsp;</h3>
-            <Link to="/register"> Register Here </Link>
+            <h3 className="text-lg font-bold">
+              {' '}
+              Don't have an account? &nbsp;
+            </h3>
+            <Link to="/register" className="m-1 p-1 rounded-lg bg-white">
+              {' '}
+              Register Here{' '}
+            </Link>
           </span>
         </form>
       </div>
