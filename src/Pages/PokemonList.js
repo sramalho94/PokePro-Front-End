@@ -18,13 +18,19 @@ const PokemonList = () => {
     getPokemon()
   }, [])
 
+  const divStyle = {
+    backgroundImage: 'url(/background.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+  }
+
   return (
-    <div className="pokemon-list-container">
+    <div className="min-h-screen" style={divStyle}>
       <NavLink to="/create_pokemon" className="button">
         Add Pokemon
       </NavLink>
       <div className="pokemon-list-header">Pokemon:</div>
-      <div className="pokemon-list">
+      <div className="grid grid-cols-4">
         {Pokemon?.map((pokemon) => (
           <div className="pokemon-card-container" key={pokemon.id}>
             <PokemonCard
