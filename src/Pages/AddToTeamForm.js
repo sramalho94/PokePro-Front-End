@@ -37,17 +37,32 @@ const AddToTeamForm = () => {
     navigate(`/trainer_team/${id}`)
   }
 
+  const divStyle = {
+    backgroundImage: 'url(/background.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+  }
+
   return (
-    <div className="add-to-team-container">
-      <form onSubmit={handleSubmit}>
-        <div className="input-wrapper">
-          <div>
+    <div
+      className="min-h-screen flex flex-col justify-center align-middle mx-auto"
+      style={divStyle}
+    >
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col justify-center align-middle"
+      >
+        <div className="flex flex-col justify-center">
+          <div className="flex flex-row justify-center">
             <img
               src="https://archives.bulbagarden.net/media/upload/6/6f/Spr_5b_038.png"
               alt="ninetails"
             />
           </div>
-          <label htmlFor="pokemon_id" className="form-header">
+          <label
+            htmlFor="pokemon_id"
+            className="mx-auto my-auto text-xl font-bold"
+          >
             Pokemon:
           </label>
           <select
@@ -55,7 +70,7 @@ const AddToTeamForm = () => {
             name="pokemon_id"
             id="pokemon_id"
             required
-            className="input"
+            className="mx-auto my-auto"
           >
             <option value="" className="choose-pokemon">
               Choose a Pokemon
@@ -71,7 +86,7 @@ const AddToTeamForm = () => {
             ))}
           </select>
         </div>
-        <button type="submit" className="button">
+        <button type="submit" className="p-1  m-1 rounded-lg bg-white mx-auto ">
           {' '}
           Submit{' '}
         </button>
