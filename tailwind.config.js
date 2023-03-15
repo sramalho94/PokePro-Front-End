@@ -22,6 +22,10 @@ module.exports = {
         dark: '#705746',
         steel: '#B7B7CE',
         fairy: '#D685AD'
+      },
+      fontFamily: {
+        'rubik-iso': ["'Rubik Iso'", 'cursive'],
+        'rubik-puddles': ["'Rubik Puddles'", 'cursive']
       }
     }
   },
