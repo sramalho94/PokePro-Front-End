@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import PokemonCard from '../components/PokemonCard'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const PokemonList = () => {
   const [Pokemon, setPokemon] = useState(null)
@@ -26,11 +26,18 @@ const PokemonList = () => {
 
   return (
     <div className="min-h-screen" style={divStyle}>
-      <NavLink to="/create_pokemon" className="button">
-        Add Pokemon
-      </NavLink>
-      <div className="pokemon-list-header">Pokemon:</div>
-      <div className="grid grid-cols-4">
+      <div className="text-3xl text-center font-bold underline mb-3">
+        Pokemon:
+      </div>
+      <div className="flex flex-row justify-center">
+        <NavLink
+          to="/create_pokemon"
+          className="p-1 mx-auto bg-white rounded-xl"
+        >
+          Add Pokemon
+        </NavLink>
+      </div>
+      <div className="grid grid-cols-2 md:grid md:grid-cols-4">
         {Pokemon?.map((pokemon) => (
           <div className="pokemon-card-container" key={pokemon.id}>
             <PokemonCard
