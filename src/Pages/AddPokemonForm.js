@@ -33,15 +33,24 @@ const AddPokemonForm = () => {
     setFormValues(initialState)
     Navigate('/')
   }
+
+  const divStyle = {
+    backgroundImage: 'url(/background.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+  }
   return (
-    <div className="add-pokemon-container">
-      <img
-        src="https://archives.bulbagarden.net/media/upload/3/36/Spr_5b_448.png"
-        alt="lucario"
-      />
-      <div className="card-overlay">
-        <form className="form-items" onSubmit={handleSubmit}>
-          <div className="input-wrapper">
+    <div className="flex flex-col min-h-screen justify-center" style={divStyle}>
+      <div className="flex flex-row justify-center">
+        <img
+          src="https://archives.bulbagarden.net/media/upload/3/36/Spr_5b_448.png"
+          alt="lucario"
+          className="h-56 w-56"
+        />
+      </div>
+      <div className="flex flex-row justify-center ">
+        <form className="flex flex-col " onSubmit={handleSubmit}>
+          <div className="flex justify-between">
             <label htmlFor="name"> name: </label>
             <input
               onChange={handleChange}
@@ -53,7 +62,7 @@ const AddPokemonForm = () => {
               required
             />
           </div>
-          <div className="input-wrapper">
+          <div className="flex justify-between">
             <label htmlFor="image"> image-url: </label>
             <input
               onChange={handleChange}
@@ -65,7 +74,7 @@ const AddPokemonForm = () => {
               required
             />
           </div>
-          <div className="input-wrapper">
+          <div className="flex justify-between">
             <label htmlFor="type1"> First Type: </label>
             <input
               onChange={handleChange}
@@ -77,7 +86,7 @@ const AddPokemonForm = () => {
               required
             />
           </div>
-          <div className="input-wrapper">
+          <div className="flex justify-between">
             <label htmlFor="type2"> Second Type: </label>
             <input
               onChange={handleChange}
@@ -88,7 +97,7 @@ const AddPokemonForm = () => {
               className="input"
             />
           </div>
-          <div className="input-wrapper">
+          <div className="flex justify-between">
             <label htmlFor="sprite"> Sprite: </label>
             <input
               onChange={handleChange}
