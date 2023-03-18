@@ -40,7 +40,10 @@ const AddPokemonForm = () => {
     backgroundSize: 'cover'
   }
   return (
-    <div className="flex flex-col min-h-screen justify-center" style={divStyle}>
+    <div
+      className="flex flex-col min-h-screen justify-center "
+      style={divStyle}
+    >
       <div className="flex flex-row justify-center">
         <img
           src="https://archives.bulbagarden.net/media/upload/3/36/Spr_5b_448.png"
@@ -49,67 +52,82 @@ const AddPokemonForm = () => {
         />
       </div>
       <div className="flex flex-row justify-center ">
-        <form className="flex flex-col " onSubmit={handleSubmit}>
-          <div className="flex justify-between">
-            <label htmlFor="name"> name: </label>
+        <form className="flex flex-col" onSubmit={handleSubmit}>
+          <div className="flex justify-between py-1">
+            <label htmlFor="name" className="font-bold">
+              {' '}
+              name:{' '}
+            </label>
             <input
               onChange={handleChange}
               name="name"
               type="text"
               placeholder="name"
               value={formValues.name}
-              className="input"
+              className="rounded-xl"
               required
             />
           </div>
-          <div className="flex justify-between">
-            <label htmlFor="image"> image-url: </label>
+          <div className="flex justify-between py-1">
+            <label htmlFor="image" className="font-bold">
+              {' '}
+              image-url:{' '}
+            </label>
             <input
               onChange={handleChange}
               name="image"
               type="text"
               placeholder="image"
               value={formValues.image}
-              className="input"
+              className="rounded-xl"
               required
             />
           </div>
-          <div className="flex justify-between">
-            <label htmlFor="type1"> First Type: </label>
+          <div className="flex justify-between py-1">
+            <label htmlFor="type1" className="font-bold">
+              {' '}
+              First Type:{' '}
+            </label>
             <input
               onChange={handleChange}
               name="type1"
               type="text"
               placeholder="type 1"
               value={formValues.type1}
-              className="input"
+              className="rounded-xl"
               required
             />
           </div>
-          <div className="flex justify-between">
-            <label htmlFor="type2"> Second Type: </label>
+          <div className="flex justify-between py-1">
+            <label htmlFor="type2" className="font-bold">
+              {' '}
+              Second Type:{' '}
+            </label>
             <input
               onChange={handleChange}
               name="type2"
               type="text"
               placeholder="type 2"
               value={formValues.type2}
-              className="input"
+              className="rounded-xl"
             />
           </div>
-          <div className="flex justify-between">
-            <label htmlFor="sprite"> Sprite: </label>
+          <div className="flex justify-between py-1">
+            <label htmlFor="sprite" className="font-bold">
+              {' '}
+              Sprite:{' '}
+            </label>
             <input
               onChange={handleChange}
               name="sprite"
               type="text"
               placeholder="sprite"
               value={formValues.sprite}
-              className="input"
+              className="rounded-xl"
               required
             />
           </div>
-          <div className="submit-button-container">
+          <div className="flex flex-row justify-center py-1 rounded-xl bg-white mx-auto">
             <button
               type="submit"
               className="button"
